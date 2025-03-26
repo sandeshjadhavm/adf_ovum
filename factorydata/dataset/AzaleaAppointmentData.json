@@ -1,5 +1,5 @@
 {
-	"name": "Excel3",
+	"name": "AzaleaAppointmentData",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",

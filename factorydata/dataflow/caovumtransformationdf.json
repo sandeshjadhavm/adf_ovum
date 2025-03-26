@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "Excel5",
+						"referenceName": "AzaleaPatientData",
 						"type": "DatasetReference"
 					},
 					"name": "azaleapatients"
@@ -16,7 +16,7 @@
 				},
 				{
 					"dataset": {
-						"referenceName": "Excel4",
+						"referenceName": "AzaleaClaimData",
 						"type": "DatasetReference"
 					},
 					"name": "azaleaclaims"
@@ -26,7 +26,7 @@
 				},
 				{
 					"dataset": {
-						"referenceName": "Excel3",
+						"referenceName": "AzaleaAppointmentData",
 						"type": "DatasetReference"
 					},
 					"name": "azaleaappointments"

@@ -1,5 +1,5 @@
 {
-	"name": "Excel4",
+	"name": "AzaleaClaimData",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
