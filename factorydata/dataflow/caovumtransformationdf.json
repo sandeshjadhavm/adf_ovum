@@ -5,6 +5,10 @@
 		"typeProperties": {
 			"sources": [
 				{
+					"dataset": {
+						"referenceName": "Excel1",
+						"type": "DatasetReference"
+					},
 					"name": "azaleapatients"
 				},
 				{
@@ -65,7 +69,8 @@
 			],
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> azaleapatients",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> azaleapatients",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false) ~> capateints",
 				"source(allowSchemaDrift: true,",
