@@ -1,26 +1,26 @@
 {
-	"name": "dataflow1",
+	"name": "caovumtransformationdf",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
 			"sources": [
 				{
-					"name": "source1"
+					"name": "azaleapatients"
 				},
 				{
-					"name": "source2"
+					"name": "capateints"
 				},
 				{
-					"name": "source3"
+					"name": "azaleaclaims"
 				},
 				{
-					"name": "source4"
+					"name": "caclaims"
 				},
 				{
-					"name": "source5"
+					"name": "azaleaappointments"
 				},
 				{
-					"name": "source6"
+					"name": "caappointments"
 				}
 			],
 			"sinks": [
@@ -29,6 +29,9 @@
 				},
 				{
 					"name": "sink2"
+				},
+				{
+					"name": "sink3"
 				}
 			],
 			"transformations": [
@@ -55,32 +58,35 @@
 				},
 				{
 					"name": "derivedColumn3"
+				},
+				{
+					"name": "alterRow3"
 				}
 			],
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source1",
+				"     validateSchema: false) ~> azaleapatients",
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source2",
+				"     validateSchema: false) ~> capateints",
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source3",
+				"     validateSchema: false) ~> azaleaclaims",
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source4",
+				"     validateSchema: false) ~> caclaims",
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source5",
+				"     validateSchema: false) ~> azaleaappointments",
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source6",
-				"source1, source2 join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"     validateSchema: false) ~> caappointments",
+				"azaleapatients, capateints join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
 				"     joinType:'outer',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join1",
-				"source3, source4 join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"azaleaclaims, caclaims join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
 				"     joinType:'outer',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join2",
-				"source5, source6 join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"azaleaappointments, caappointments join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
 				"     joinType:'inner',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
@@ -90,6 +96,7 @@
 				"join2 derive() ~> derivedColumn2",
 				"derivedColumn2 alterRow() ~> alterRow2",
 				"join3 derive() ~> derivedColumn3",
+				"derivedColumn3 alterRow() ~> alterRow3",
 				"alterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
@@ -97,7 +104,11 @@
 				"alterRow2 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> sink2"
+				"     skipDuplicateMapOutputs: true) ~> sink2",
+				"alterRow3 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink3"
 			]
 		}
 	}
