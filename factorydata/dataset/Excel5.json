@@ -1,0 +1,90 @@
+{
+	"name": "Excel5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Patient.xlsx",
+				"container": "azaleaoutput"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "resourceType",
+				"type": "String"
+			},
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "meta_lastUpdated",
+				"type": "String"
+			},
+			{
+				"name": "meta_profile",
+				"type": "String"
+			},
+			{
+				"name": "extension",
+				"type": "String"
+			},
+			{
+				"name": "identifier",
+				"type": "String"
+			},
+			{
+				"name": "active",
+				"type": "String"
+			},
+			{
+				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "gender",
+				"type": "String"
+			},
+			{
+				"name": "birthDate",
+				"type": "String"
+			},
+			{
+				"name": "address",
+				"type": "String"
+			},
+			{
+				"name": "generalPractitioner",
+				"type": "String"
+			},
+			{
+				"name": "managingOrganization_reference",
+				"type": "String"
+			},
+			{
+				"name": "managingOrganization_type",
+				"type": "String"
+			},
+			{
+				"name": "managingOrganization_display",
+				"type": "String"
+			},
+			{
+				"name": "telecom",
+				"type": "String"
+			},
+			{
+				"name": "link",
+				"type": "String"
+			}
+		]
+	}
+}

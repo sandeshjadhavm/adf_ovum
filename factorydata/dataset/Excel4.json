@@ -1,0 +1,146 @@
+{
+	"name": "Excel4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Claim.xlsx",
+				"container": "azaleaoutput"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "resourceType",
+				"type": "String"
+			},
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "meta_lastUpdated",
+				"type": "String"
+			},
+			{
+				"name": "contained",
+				"type": "String"
+			},
+			{
+				"name": "identifier",
+				"type": "String"
+			},
+			{
+				"name": "status",
+				"type": "String"
+			},
+			{
+				"name": "type_coding",
+				"type": "String"
+			},
+			{
+				"name": "type_text",
+				"type": "String"
+			},
+			{
+				"name": "use",
+				"type": "String"
+			},
+			{
+				"name": "patient_reference",
+				"type": "String"
+			},
+			{
+				"name": "patient_type",
+				"type": "String"
+			},
+			{
+				"name": "patient_display",
+				"type": "String"
+			},
+			{
+				"name": "billablePeriod_start",
+				"type": "String"
+			},
+			{
+				"name": "billablePeriod_end",
+				"type": "String"
+			},
+			{
+				"name": "created",
+				"type": "String"
+			},
+			{
+				"name": "provider_reference",
+				"type": "String"
+			},
+			{
+				"name": "provider_type",
+				"type": "String"
+			},
+			{
+				"name": "provider_display",
+				"type": "String"
+			},
+			{
+				"name": "priority_coding",
+				"type": "String"
+			},
+			{
+				"name": "priority_text",
+				"type": "String"
+			},
+			{
+				"name": "careTeam",
+				"type": "String"
+			},
+			{
+				"name": "supportingInfo",
+				"type": "String"
+			},
+			{
+				"name": "insurance",
+				"type": "String"
+			},
+			{
+				"name": "facility_reference",
+				"type": "String"
+			},
+			{
+				"name": "facility_type",
+				"type": "String"
+			},
+			{
+				"name": "facility_display",
+				"type": "String"
+			},
+			{
+				"name": "diagnosis",
+				"type": "String"
+			},
+			{
+				"name": "procedure",
+				"type": "String"
+			},
+			{
+				"name": "item",
+				"type": "String"
+			},
+			{
+				"name": "total_value",
+				"type": "String"
+			},
+			{
+				"name": "total_currency",
+				"type": "String"
+			}
+		]
+	}
+}

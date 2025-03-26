@@ -1,0 +1,82 @@
+{
+	"name": "Excel3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Appointment.xlsx",
+				"container": "azaleaoutput"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "resourceType",
+				"type": "String"
+			},
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "meta_lastUpdated",
+				"type": "String"
+			},
+			{
+				"name": "identifier",
+				"type": "String"
+			},
+			{
+				"name": "status",
+				"type": "String"
+			},
+			{
+				"name": "appointmentType_coding",
+				"type": "String"
+			},
+			{
+				"name": "appointmentType_text",
+				"type": "String"
+			},
+			{
+				"name": "reasonCode",
+				"type": "String"
+			},
+			{
+				"name": "start",
+				"type": "String"
+			},
+			{
+				"name": "end",
+				"type": "String"
+			},
+			{
+				"name": "minutesDuration",
+				"type": "String"
+			},
+			{
+				"name": "created",
+				"type": "String"
+			},
+			{
+				"name": "participant",
+				"type": "String"
+			},
+			{
+				"name": "comment",
+				"type": "String"
+			},
+			{
+				"name": "meta_profile",
+				"type": "String"
+			}
+		]
+	}
+}
