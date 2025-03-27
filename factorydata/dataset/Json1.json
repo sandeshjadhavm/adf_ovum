@@ -1,0 +1,19 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "data_0016a373-d439-43d9-b113-9421e558cddf_75015e21-436e-4257-8928-5f339f8b779f",
+				"container": "azaleaoutput"
+			}
+		},
+		"schema": {}
+	}
+}
